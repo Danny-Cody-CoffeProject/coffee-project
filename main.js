@@ -1,10 +1,15 @@
 "use strict"
 
+
+// CREATES NEW HTML FOR EACH COFFEE
 function renderCoffee(coffee) {
-    var html = '<div><h2>' + coffee.name + '</h2><p>' + coffee.roast +'</p></div>';
+    var html = '<div id="cards"><h2>' + coffee.name + '</h2><p>' + coffee.roast +'</p></div>';
+    html += document.getElementById('coffees').innerHTML
     return html;
 }
+//
 
+// DISPLAYS HTML FOR EACH COFFEE
 function renderCoffees(coffees) {
     var html = '';
     for(var i = 0; i < coffees.length; i++) {
@@ -12,6 +17,11 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+//
+
+
+
+
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
