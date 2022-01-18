@@ -3,44 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
-
-
-    <form>
-<!--        SEARCH FORM-->
-        <label for="search-coffees">
-            <input id="search-coffees">
-            <button id="search">SEARCH</button>
-        </label>
-<!--        -->
-
-
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
 
 
 
-<!--    COFFEES RENDER INTO THIS DIV-->
-    <div id="coffees">
-
-    </div>
-<!---->
-
-    
-    
 
 
-    <script src="main.js"></script>
+
+<!--HEADER-->
+<div id="neon">
+    <h1>C O F F E E</h1>
+</div>
+
+
+
+
+
+<!--SEARCH FOR COFFEES SECTION-->
+<form id="search-box">
+    <h2>-- SEARCH NAME --</h2>
+    <label for="searched-coffee"></label>
+    <input type="text" class="form-control" placeholder="ENTER NAME" id="searched-coffee" onkeyup="searchCoffee()"
+           onkeydown="searchCoffee()">
+    <!--    <button id="searched-btn">SEARCH</button>-->
+    <label for="roast-selection"></label>
+    <h2>-- SEARCH TYPE --</h2>
+    <select id="roast-selection">
+        <option>All</option>
+        <option>Americano</option>
+        <option>Iced</option>
+        <option>Mocha</option>
+    </select>
+    <button id="submit" type="submit">SEARCH COFFEES</button>
+    <br>
+</form>
+<br>
+
+
+
+
+<!--COFFEE CARDS ADDED INTO HERE-->
+<div class='row' id="cards">
+</div>
+
+
+
+
+<!--ADD COFFEE SECTION-->
+<div class="add-coffee">
+    <h2> - - - - Add Your Own Coffee Here! - - - - </h2>
+    <br>
+    <label for="added-coffee-name">Enter New Coffee Name</label>
+    <input type="text" class="form-control" id="added-coffee-name" placeholder="Name of New Coffee">
+    <label for="added-coffee-roast"><br>Enter Type Of New Coffee</label>
+    <select class="form-control" id="added-coffee-roast">
+        <option value="" disabled selected>Choose a type</option>
+        <option value="Iced">Iced</option>
+        <option value="Mocha">Mocha</option>
+        <option value="Americano">Americano</option>
+    </select>
+    <br>
+    <h5 id="duplicate-coffee"></h5>
+    <button id="contribute-coffee">Add Coffee !</button>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+<script src="main.js"></script>
 </body>
 </html>
-
-
