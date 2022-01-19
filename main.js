@@ -50,7 +50,7 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
 
-    if (selectedRoast === 'all') {
+    if (selectedRoast === 'All') {
         tbody.innerHTML = renderCoffees(coffees);
     } else {
         coffees.forEach(function (coffee) {
